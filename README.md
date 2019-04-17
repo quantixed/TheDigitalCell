@@ -2,6 +2,8 @@
 
 Code associated with The Digital Cell book.
 
+[![DOI](https://zenodo.org/badge/180952157.svg)](https://zenodo.org/badge/latestdoi/180952157)
+
 In each of the folders in this repo, you will find code examples that are featured in the corresponding book chapter.
 The code examples are organized in numerical order that they are encountered in the book.
 They are either:
