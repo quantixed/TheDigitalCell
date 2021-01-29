@@ -8,6 +8,8 @@ my_col_names <- colnames(my_raw_data)
 mean_columns <- my_col_names[grepl("^Mean",my_col_names)]
 # make data frame with only mean columns
 my_data <- subset(my_raw_data, select=mean_columns)
+# calculate means per row
+my_means <- rowMeans(my_data, na.rm=TRUE)
 # have a look at each ROI
 matplot(1:length(my_means), my_data,
         type = "l",
@@ -15,14 +17,12 @@ matplot(1:length(my_means), my_data,
         col = "grey",
         xlab = "Frames",
         ylab = "Mean Pixel Density")
-# calculate means per row
-my_means <- rowMeans(my_data, na.rm=TRUE)
 # open a pdf file
 pdf("plot.pdf")
 # plot out the result
-plot(1:length(my_means), my_means, 
-     type = "l", 
-     col = "red", 
+plot(1:length(my_means), my_means,
+     type = "l",
+     col = "red",
      lwd = 3,
      xlab = "Frames",
      ylab = "Mean Pixel Density")

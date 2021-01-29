@@ -18,3 +18,4 @@ During the Japanese translation of "The Digital Cell" a few errors were found in
 
 1. In **Chapter 4** section *How to analyze an image*, the text should read: “You can calculate the number of pixels in the ROI of a calibrated image by *dividing* the Area by the pixel size of the image (if you know it), or by dividing RawIntDen by the Mean.”
 2. In **Chapter 5** section **Power analysis for cell biologists**, the example given contains two errors. It should read "Assuming the standard deviation increases proportionally (to *2400*)". The code example should therefore be `power.t.test(n = NULL, delta = 2000, sd = 2400, sig.level = 0.05, power = 0.9)` This gives n = 31.3 which should be "rounded up" to 32". The code example in this repo has now been updated.
+3. In **Chapter 5** section **Compare two groups**, "chi-squared text" should read "chi-squared test".
